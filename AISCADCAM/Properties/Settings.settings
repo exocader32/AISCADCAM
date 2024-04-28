@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AISCADCAM.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ProductNameLitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">АИС CAD/CAM</Value>
+    </Setting>
+    <Setting Name="ProductName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Автоматизированная система учёта CAD/CAM зуботехнической лаборатории</Value>
+    </Setting>
+    <Setting Name="CommentBack" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">PaleTurquoise</Value>
+    </Setting>
+    <Setting Name="CommentFore" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">64, 64, 64</Value>
+    </Setting>
+    <Setting Name="CommentForeSub" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Gray</Value>
+    </Setting>
+    <Setting Name="Background" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Control</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
