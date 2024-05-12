@@ -1,1 +1,1 @@
-﻿data source=(localdb)\mssqllocaldb;initial catalog=AISCADCAMDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework
+﻿data source=HOME-PC;initial catalog=AISCADCAMDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework

@@ -126,6 +126,7 @@
             this.Name = "FormChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "СМЕНА ПАРОЛЯ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormChangePassword_FormClosing);
             this.Load += new System.EventHandler(this.FormAuthorization_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

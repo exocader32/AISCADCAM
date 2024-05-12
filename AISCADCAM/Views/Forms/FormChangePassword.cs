@@ -48,7 +48,7 @@ namespace AISCADCAM
         private void button1_Click(object sender, EventArgs e)
         {
             // проверки 
-            if (pass1.Text != pass2.Text)
+            if (pass1.Text != pass2.Text || string.IsNullOrWhiteSpace(pass1.Text))
             {
                 MessageBox.Show("Пароли не совпадают. Укажите одинаковые пароли");
                 return;
@@ -62,14 +62,15 @@ namespace AISCADCAM
                 return;
             }
 
-            _user.Password = pass1.Text;
+            _user.Password = pass1.Text.Encrypt();
             // обновить данные 
             Instance.DB.Users.AddOrUpdate(_user);
             // сохранить изменения
             Instance.DB.SaveChanges();
             // задать текущего пользователя с новыми данными
+            var tmp = pass1.Text.Encrypt();
             Instance.CurrentUser =
-                Instance.DB.Users.FirstOrDefault(u => u.Login == _user.Login && u.Password == pass1.Text);
+                Instance.DB.Users.FirstOrDefault(u => u.Login == _user.Login && u.Password== tmp);
             if (Instance.CurrentUser == null)
             {
                 MessageBox.Show("Пользователь не найден!", "Ошибка входа");
@@ -77,6 +78,12 @@ namespace AISCADCAM
                 return;
             }
             Close();
+        }
+
+        private void FormChangePassword_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                Instance.CurrentUser = null;
         }
     }
 }

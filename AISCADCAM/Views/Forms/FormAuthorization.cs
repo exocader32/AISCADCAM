@@ -36,6 +36,8 @@ namespace AISCADCAM
                 button1_Click(sender, e);
         }
 
+        //los3inkgitnux80kgit!Uu
+
         // вход
         private void button1_Click(object sender, EventArgs e)
         {

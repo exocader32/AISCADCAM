@@ -138,12 +138,13 @@ namespace AISCADCAM.Views.UControls
             SetSert(EGridSort.sortNo);
         }
 
+        // нажатие кнопки ОК - сохранение комментария в выделенный заказ
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             if (currGrid != null)
             {
                 var item = Instance.DB.Orders?.FirstOrDefault(o => o.Id == currGrid.Id);
-                if (item != null && item.Commentary!=textBox1.Text)
+                if (item != null && item.Commentary!=textBox1.Text && !issort)
                 {
                     item.Commentary = textBox1.Text;
                     Instance.DB.Orders.AddOrUpdate(item);

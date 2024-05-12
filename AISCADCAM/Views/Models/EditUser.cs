@@ -29,7 +29,7 @@ namespace AISCADCAM
             nam.Text = _user.Name;
             lnam.Text = _user.LastName;
             login.Text = _user.Login;
-            pass.Text = _user.Password;
+            pass.Text = _user.Password.Decrypt();
             dat.Value = _user.Date;
             block.Checked = _user.IsBlock;
             type.Items.AddRange(Enum.GetNames(typeof(EUser)));
@@ -39,7 +39,7 @@ namespace AISCADCAM
             nam.TextChanged += (o, args) => _user.Name = nam.Text;
             lnam.TextChanged += (o, args) => _user.LastName = lnam.Text;
             login.TextChanged += (o, args) => _user.Login = login.Text;
-            pass.TextChanged += (o, args) => _user.Password = pass.Text;
+            pass.TextChanged += (o, args) => _user.Password = pass.Text.Encrypt();
             dat.ValueChanged += (o, args) => _user.Date = dat.Value;
             block.CheckedChanged += (o, args) => _user.IsBlock = block.Checked;
             type.SelectedIndexChanged += (o, args) =>
