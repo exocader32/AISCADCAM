@@ -79,7 +79,7 @@ namespace AISCADCAM
             var f = new OpenFileDialog
             {
                 Title = @"Укажите файл бакапа для восстановления...",
-                InitialDirectory = $"{Application.StartupPath}\\backup\\",
+                InitialDirectory = $"{Application.StartupPath}\\Backup\\",
                 Filter = @"BACKUP MSSQLDB|*.bak",
             };
             if (f.ShowDialog() != DialogResult.OK) return;

@@ -231,7 +231,7 @@ namespace AISCADCAM.Core
         /// <summary> Создать бакап </summary>
         public void Backup()
         {
-            string path = $"{Application.StartupPath}\\backup\\";
+            string path = $"{Application.StartupPath}\\Backup\\";
             Directory.CreateDirectory(path);
             string dbname = Database.Connection.Database;
             string sqlCommand = $"BACKUP DATABASE [{dbname}] " +
